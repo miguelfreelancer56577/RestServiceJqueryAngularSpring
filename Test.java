@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.walmartstores.backOffice.spendManagement.supplierManagement.pojo.User;
-import com.walmartstores.backOffice.spendManagement.supplierManagement.pojodb2.ApCompanyTxt;
 
 @RestController
 @RequestMapping(value = "/test")
 public class Test {
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
-	public ResponseEntity<ApCompanyTxt> getUser(@RequestBody ApCompanyTxt data){
-		ApCompanyTxt ap = data;
-		return new ResponseEntity<ApCompanyTxt>(ap,HttpStatus.OK);
+	public ResponseEntity<User> getUser(@RequestBody User data){
+		User ap = data;
+		return new ResponseEntity<User>(ap,HttpStatus.OK);
 	} 
 }
